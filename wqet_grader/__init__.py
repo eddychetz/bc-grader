@@ -98,32 +98,32 @@ def init_html():
   }
   
   
-  .wqet-result {
+  .bcet-result {
     width: 450px;
     clear: both;
   }
   
-  .wqet-result .animation {
+  .bcet-result .animation {
     float: left;
     width: 100px;
   }
   
-  .wqet-result .animation .checkmark,
-  .wqet-result .animation .failmark {
+  .bcet-result .animation .checkmark,
+  .bcet-result .animation .failmark {
     margin: 20px auto 20px auto;
   }
   
-  .wqet-result .details {
+  .bcet-result .details {
     float: right;
     width: 349px;
     padding: 28px 0;
   }
   
-  .wqet-result .details .title {
+  .bcet-result .details .title {
     font-weight: bold;
     font-size: 110%;
   }
-  .wqet-result .details p {
+  .bcet-result .details p {
     margin: 0;
   }
 </style>
@@ -148,7 +148,7 @@ def render_score_html(result):
   if result.get('passed', False) == True:
     comment = result.get('comment', 'Question Passed!')
     html = '''
-    <div class="wqet-result">
+    <div class="bcet-result">
       <div class="animation">
         <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
           <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/>
