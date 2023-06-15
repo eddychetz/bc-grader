@@ -15,10 +15,10 @@ class install(_install):
         _install.run(self)
 
 setup(
-    name="wqet_grader",
+    name="bcet_grader",
     version="0.1.21",
-    description='Grading for WQET',
-    url='https://github.com/dominiek/wqet-grader',
+    description='Grading for BCET',
+    url='https://github.com/dominiek/bcet-grader',
     cmdclass={'install': install},
     include_package_data=True,
     install_requires=[
