@@ -1,9 +1,9 @@
-# WQET Grader Client
+# BCET Grader Client
 
 ## Installation
 
 ```
-pip install wqet-grader
+pip install bcet-grader
 ```
 
 ## Usage: Notebooks
@@ -12,10 +12,10 @@ Simple grading:
 
 ```python
 
-import wqet_grader
+import bcet_grader
 
 submission = "My Answer"
-wqet_grader.grade('Sample Assessment', 'Question 1', submission)
+bcet_grader.grade('Sample Assessment', 'Question 1', submission)
 
 ```
 
@@ -23,11 +23,11 @@ Object grading:
 
 ```python
 
-import wqet_grader
+import bcet_grader
 
 arg1 = 3.14
 arg2 = "something else"
-wqet_grader.grade_object('Sample Assessment', 'Question 1', arg1=arg1, arg2=arg2)
+bcet_grader.grade_object('Sample Assessment', 'Question 1', arg1=arg1, arg2=arg2)
 
 ```
 
@@ -46,7 +46,7 @@ You can load a directory of grading algorithm modules, by running the following 
 ./scripts/load_and_run fixtures/content
 ```
 
-This will automatically restart the server when any changes to the Grading API code or content is detected. Reporting to the WQET platform is disabled and additional debug logging is enabled on the console.
+This will automatically restart the server when any changes to the Grading API code or content is detected. Reporting to the BCET platform is disabled and additional debug logging is enabled on the console.
 
 The sample notebook of this content can be run as follows:
 
@@ -62,10 +62,10 @@ Then open: http://127.0.0.1:8888/lab/tree/sample-questions.ipynb?token=test
 You can spin up a grading server for a directory of content, using the following code:
 
 ```python
-from wqet_grader.utils import set_grading_content_path
+from bcet_grader.utils import set_grading_content_path
 set_grading_content_path("my-curriculum-folder")
 
-from wqet_grader.server import app
+from bcet_grader.server import app
 app.run(host="localhost", port=2400, debug=True, threaded=False)
 ```
 
